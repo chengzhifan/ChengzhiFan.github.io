@@ -10,7 +10,7 @@ categories: linux
 今天做NTP同步（地址为域名）时发现同步特别慢，大约有4-5秒的卡顿延时。
 `/usr/sbin/ntpdate tiger.sina.com`
 ### 分析
-用strace追踪后发现我hosts文件里这个域名指定了多个IP，并且向每个IP都发起了ntp请求。
+用strace追踪后发现`/etc/hosts`文件里这个域名指定了多个IP，并且向每个IP都发起了ntp请求。
 
 ```
 open("/etc/host.conf", O_RDONLY)        = 3
