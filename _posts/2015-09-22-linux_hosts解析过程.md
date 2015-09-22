@@ -41,4 +41,4 @@ Google后发现`/etc/host.conf`下有个配置参数` multi `，Centos 6.5系统
 
 ```
 ### 总结
-`/etc/hosts`支持一个域名对应多个IP的解析，可以利用此功能提高服务高可用。当`multi`功能开启时*gethostbyname()*返回此域名对应的所有IP地址池，否则只返回对应的第一个IP地址。需要注意的是这个功能在 Centos 5.4默认是关闭的，在CentOS 6.5上默认是开启的。
+`/etc/hosts`支持一个域名对应多个IP的解析，可以利用此功能提高服务高可用。当`multi`功能开启时*gethostbyname()*返回此域名对应的所有IP地址池，否则只返回对应的第一个IP地址。需要注意的是这个功能在 Centos 5.4默认是关闭的，而在CentOS 6.5上默认是开启的。
