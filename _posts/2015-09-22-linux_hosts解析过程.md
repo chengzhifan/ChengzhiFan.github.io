@@ -11,7 +11,6 @@ categories: linux
 ### 分析
 奇怪的是手动指定了host地址为什么会变慢，追踪后发现我hosts文件里同一个域名指定了多个IP，并且向每个IP都发起了ntp请求。
 
-
 ```
 open("/etc/host.conf", O_RDONLY)        = 3
 open("/etc/hosts", O_RDONLY|O_CLOEXEC)  = 3
@@ -24,7 +23,6 @@ connect(3, {sa_family=AF_INET, sin_port=htons(123), sin_addr=inet_addr("8.8.8.8"
 connect(3, {sa_family=AF_INET, sin_port=htons(123), sin_addr=inet_addr("172.16.181.73")}, 16) = -1 EINPROGRESS (Operation now in progress)
 ```
 Google后发现`/etc/host.conf`下有个配置参数` multi `，Centos 6.5系统中默认开启了此项功能。
-
 `multi on`
 
 >Valid values are on and off.  If set to on, the resolv+ library will return all valid addresses for a host  that  appears  in  the  /etc/hosts  file,instead of only the first.  This is off by default, as it may cause a substantial performance loss at sites with large hosts files.
