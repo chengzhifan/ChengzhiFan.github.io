@@ -28,7 +28,7 @@ Google后发现`/etc/host.conf`下有个配置参数` multi `，Centos 6.5系统
 >multi
 >Valid values are on and off.  If set to on, the resolv+ library will return all valid addresses for a host  that  appears  in  the  /etc/hosts  file,instead of only the first.  This is off by default, as it may cause a substantial performance loss at sites with large hosts files.
 
-### 解决
+### 解决办法有两种：
 1. 关闭`/etc/host.conf`中的**multi**配置`multi off`
 2. 注释掉`/etc/hosts`中无用的IP地址
 
