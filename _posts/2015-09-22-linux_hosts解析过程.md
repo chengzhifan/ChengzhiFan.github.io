@@ -10,7 +10,8 @@ categories: linux
 今天在手动指定完hosts后，做NTP同步（地址为域名）时发现同步特别慢，大约有4-5秒的卡顿延时。
 ### 分析
 奇怪的是手动指定了host地址为什么会变慢，追踪后发现我hosts文件里同一个域名指定了多个IP，并且向每个IP都发起了ntp请求。
-```
+
+```ssh
 open("/etc/host.conf", O_RDONLY)        = 3
 open("/etc/hosts", O_RDONLY|O_CLOEXEC)  = 3
 open("/etc/gai.conf", O_RDONLY)         = 3
