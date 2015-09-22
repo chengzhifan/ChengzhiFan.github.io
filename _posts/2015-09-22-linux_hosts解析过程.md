@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "HOSTS解析"
+date:   2015-09-22
+categories: linux
+---
+
 # /etc/hosts 解析过程
 ### 遇到的问题
 今天在手动指定完hosts后，做NTP同步（地址为域名）时发现同步特别慢，大约有4-5秒的卡顿延时。
