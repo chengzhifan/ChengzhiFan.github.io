@@ -8,7 +8,7 @@ categories: linux
 # /etc/hosts 解析过程
 ### 遇到的问题
 今天做NTP同步（地址为域名）时发现同步特别慢，大约有4-5秒的卡顿延时。
-`/usr/sbin/ntpdate tiger.sina.com`
+`/usr/sbin/ntpdate ntp.xxx.com`
 ### 分析
 用strace追踪后发现`/etc/hosts`文件里这个域名指定了多个IP，并且向每个IP都发起了ntp请求。
 
@@ -35,9 +35,9 @@ Google后发现`/etc/host.conf`下有个配置参数` multi `，Centos 6.5系统
 ```
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-#192.168.6.5 ntp.sina.com
-172.16.18.73 ntp.sina.com
-#8.8.8.8 ntp.sina.com
+#192.168.6.5 ntp.xxx.com
+172.16.18.73 ntp.xxx.com
+#8.8.8.8 ntp.xxx.com
 
 ```
 ### 总结
