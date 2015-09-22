@@ -32,6 +32,7 @@ Google后发现`/etc/host.conf`下有个配置参数` multi `，Centos 6.5系统
 1. 关闭`/etc/host.conf`中的**multi**配置
 
 `multi off`
+
 2. 注释掉`/etc/hosts`中无用的IP地址
 
 ```
