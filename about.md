@@ -7,7 +7,9 @@ title: About
 熟练: C/C++  
 熟悉: python, php, Go  
 
+<!--
 自己实现的一个博客 [yadam.sinaapp.com](http://yadam.sinaapp.com)  
+-->
 
 <span class="icon icon--github">
 	<svg viewBox="0 0 16 16">
@@ -34,4 +36,4 @@ chengzhifan<span class="icon icon--github">
    </g>
 </g>
 </svg>
-</span> 126.com
+</span> qq.com
