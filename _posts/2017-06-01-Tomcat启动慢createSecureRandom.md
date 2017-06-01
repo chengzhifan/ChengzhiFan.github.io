@@ -5,11 +5,10 @@ date:   2017-06-01
 categories: linux
 ---
 
-Tomcat 8启动很慢，且日志上无任何错误，在日志中查看到如下信息：
+Tomcat 8.5启动很慢，且日志上无任何错误，在日志中查看到如下信息：
 ```
-Log4j:[2015-10-29 15:47:11]  INFO ReadProperty:172 - Loading properties file from class path resource [resources/jdbc.properties]
-Log4j:[2015-10-29 15:47:11]  INFO ReadProperty:172 - Loading properties file from class path resource [resources/common.properties]
-29-Oct-2015 15:52:53.587 INFO [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [342,445] milliseconds.
+01-Jun-2017 16:08:06.943 INFO [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [110,419] milliseconds.
+
 ```
 ##  原因
 
