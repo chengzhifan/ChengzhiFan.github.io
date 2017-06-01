@@ -2,7 +2,7 @@
 layout: post
 title:  "Tomcat启动慢"
 date:   2017-06-01
-categories: linux
+categories: file atomic
 ---
 
 Tomcat 8.5启动很慢，且日志上无任何错误，在日志中查看到如下信息：
