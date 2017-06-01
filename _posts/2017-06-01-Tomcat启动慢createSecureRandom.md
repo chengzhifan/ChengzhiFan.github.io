@@ -11,7 +11,7 @@ Log4j:[2015-10-29 15:47:11]  INFO ReadProperty:172 - Loading properties file fro
 Log4j:[2015-10-29 15:47:11]  INFO ReadProperty:172 - Loading properties file from class path resource [resources/common.properties]
 29-Oct-2015 15:52:53.587 INFO [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [342,445] milliseconds.
 ```
-###原因
+##  原因
 
 Tomcat 7/8都使用org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom类产生安全随机类SecureRandom的实例作为会话ID，这里花去了342秒，也即接近6分钟。
 
@@ -33,7 +33,7 @@ SHA1PRNG算法是基于SHA-1算法实现且保密性较强的伪随机数生成�
 
 随机数产生器会手机来自设备驱动器和其它源的环境噪声数据，并放入熵池中。产生器会评估熵池中的噪声数据的数量。当熵池为空时，这个噪声数据的收集是比较花时间的。这就意味着，Tomcat在生产环境中使用熵池时，会被阻塞较长的时间。
 
-###解决
+##  解决
 
 有两种解决办法：
 
